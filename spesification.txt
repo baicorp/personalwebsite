@@ -1,0 +1,20 @@
+###SMALL SCREEN###
+h1 : text-5xl, font-bold
+
+h2 : text-3xl, font-bold
+
+h3 : text-xl, font-bold
+
+p, li : text-base
+
+padding : 32px
+
+###WIDE SCREEN###
+
+h1 : text-7xl, font-bold
+
+h2 : text-5xl, font-bold
+
+h3 : text-3xl, font-bold
+
+p, li : text-xl
