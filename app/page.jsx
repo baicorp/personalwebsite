@@ -72,11 +72,23 @@ export default function Home() {
       <section className="relative max-w-[1200px] p-8 space-y-12 md:p-16 md:space-y-12">
         <h2 className="text-center flex justify-center gap-2 items-center">
           Skills{" "}
-          <Image src={"/fire.gif"} width={30} height={30} className="mb-2" />{" "}
+          <Image
+            src={"/fire.gif"}
+            width={30}
+            height={30}
+            alt="fire gif"
+            className="mb-2"
+          />{" "}
         </h2>
         <div className="flex gap-4 flex-wrap md:justify-center">
           {techSkills.map((data) => {
-            return <TechSkillsCard logoName={data.logoName} logo={data.logo} />;
+            return (
+              <TechSkillsCard
+                key={data.id}
+                logoName={data.logoName}
+                logo={data.logo}
+              />
+            );
           })}
         </div>
         <Image
