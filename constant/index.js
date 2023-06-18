@@ -42,3 +42,21 @@ export const projects = [
     tech: ["html", "css", "javaScript"],
   },
 ];
+
+export const techSkills = [
+  { id: 1, logoName: "html", logo: "/tech-logo/html.svg" },
+  { id: 2, logoName: "css", logo: "/tech-logo/css.svg" },
+  { id: 3, logoName: "javaScript", logo: "/tech-logo/javaScript.svg" },
+  { id: 4, logoName: "python", logo: "/tech-logo/python.svg" },
+  { id: 5, logoName: "react", logo: "/tech-logo/react.svg" },
+  { id: 6, logoName: "node js", logo: "/tech-logo/node js.svg" },
+  { id: 7, logoName: "vite", logo: "/tech-logo/vite.svg" },
+  { id: 8, logoName: "tailwind css", logo: "/tech-logo/tailwind css.svg" },
+  { id: 9, logoName: "next js", logo: "/tech-logo/next js.svg" },
+  { id: 10, logoName: "sql", logo: "/tech-logo/sql.svg" },
+  { id: 11, logoName: "supabase", logo: "/tech-logo/supabase.svg" },
+  { id: 12, logoName: "dart", logo: "/tech-logo/dart.svg" },
+  { id: 13, logoName: "flutter", logo: "/tech-logo/flutter.svg" },
+  { id: 14, logoName: "firebase", logo: "/tech-logo/firebase.svg" },
+  { id: 15, logoName: "git", logo: "/tech-logo/git.svg" },
+];
