@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { projects } from "@/constant";
-import ProjectCard from "@/components/projectCard";
-import Quotes from "@/components/Quotes";
+import { projects, techSkills } from "@/constant";
+import { ProjectCard, Quotes, TechSkillsCard } from "@/components";
 import { Suspense } from "react";
 
 export default function Home() {
@@ -70,6 +69,24 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="relative max-w-[1200px] p-8 space-y-12 md:p-16 md:space-y-12">
+        <h2 className="text-center flex justify-center gap-2 items-center">
+          Skills{" "}
+          <Image src={"/fire.gif"} width={30} height={30} className="mb-2" />{" "}
+        </h2>
+        <div className="flex gap-4 flex-wrap md:justify-center">
+          {techSkills.map((data) => {
+            return <TechSkillsCard logoName={data.logoName} logo={data.logo} />;
+          })}
+        </div>
+        <Image
+          src={"/blob.svg"}
+          width={100}
+          height={100}
+          alt="blob"
+          className="-z-10 rotate-45 absolute -translate-y-1/2 top-1/2 left-1/2 -translate-x-1/2 object-contain w-2/3 max-w-xs"
+        />
+      </section>
       <section className="max-w-[1440px] p-8 space-y-8 md:p-16 md:space-y-12 w-full">
         <h2 className="text-center">Fun 🧪</h2>
         <p className="text-center">
@@ -96,6 +113,7 @@ export default function Home() {
           <Quotes />
         </Suspense>
       </section>
+      <div className="fixed -z-10 w-full h-screen top-0 backdrop-blur-3xl"></div>
     </main>
   );
 }
