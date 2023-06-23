@@ -56,15 +56,13 @@ export default function Home() {
             <h2 className="leading-tight md:leading-10 lg:leading-[3.5rem]">
               {`I'm a Final-year Student Passionate About Frontend Development.`}
             </h2>
-            <p className="md:tracking-wider">
-              {`Currently, I'm delving deeper into React JS and exploring related
-              frontend technologies such as Tailwind CSS. I'm also experimenting
-              with Next.js and Supabase.`}
+            <p className="md:tracking-wide">
+              {`At this time, I am actively working on expanding my knowledge of ReactJS. Additionally, I am exploring NextJS and experimenting with the Supabase database.`}
             </p>
-            <p className="md:tracking-wider">
-              I make it a priority to stay up-to-date with the latest
-              developments in the frontend world and thoroughly enjoy
-              experimenting with new concepts and tools.
+            <p className="md:tracking-wide">
+              I make sure to keep myself updated with the latest happenings in
+              the frontend field, and I really enjoy trying out new ideas and
+              tools.
             </p>
           </div>
         </div>
@@ -73,11 +71,11 @@ export default function Home() {
         <h2 className="text-center flex justify-center gap-2 items-center">
           Skills{" "}
           <Image
-            src={"/fire.gif"}
+            src={"/fire.webp"}
             width={30}
             height={30}
             alt="fire gif"
-            className="mb-2"
+            className="w-10 mb-2"
           />{" "}
         </h2>
         <div className="flex gap-4 flex-wrap md:justify-center">
@@ -100,7 +98,16 @@ export default function Home() {
         />
       </section>
       <section className="max-w-[1440px] p-8 space-y-8 md:p-16 md:space-y-12 w-full">
-        <h2 className="text-center">Fun 🧪</h2>
+        <div className="flex gap-2 justify-center items-center">
+          <h2>Projects </h2>
+          <Image
+            src={"/rockets.webp"}
+            width={20}
+            height={20}
+            alt="fire gif"
+            className="w-10"
+          />{" "}
+        </div>
         <p className="text-center">
           Collections of exciting projects to fulfill my curiosity.
         </p>
@@ -120,7 +127,7 @@ export default function Home() {
           })}
         </div>
       </section>
-      <section className="mt-8 max-w-[1200px] p-8">
+      <section className="mt-8 max-w-[1200px] p-8 md:p-16">
         <Suspense fallback={<p>. . .</p>}>
           <Quotes />
         </Suspense>
