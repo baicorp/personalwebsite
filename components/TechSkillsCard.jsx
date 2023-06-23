@@ -11,7 +11,7 @@ export default function TechSkillsCard({ logoName, logo }) {
         alt={`${logo}-logo`}
         className="w-6 h-6 object-contain"
       />
-      <p className="text-md lg:text-xl">{logoName}</p>
+      <p>{logoName}</p>
       <div className="bg-[#1f4338] group-hover/bg:opacity-100 duration-150 -z-[2] opacity-40 absolute top-0 left-0 w-full h-full backdrop-blur-2xl"></div>
     </div>
   );
