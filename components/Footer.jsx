@@ -9,7 +9,7 @@ function FooterList({ title, links }) {
       <div className="flex flex-col gap-2 mt-3">
         {links.map((link) => {
           return (
-            <Link href={link.linkSource} target="_blank">
+            <Link key={link.id} href={link.linkSource} target="_blank">
               <p className="text-lg">{link.linkName}</p>
             </Link>
           );
