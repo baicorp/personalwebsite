@@ -63,6 +63,7 @@ export const techSkills = [
 
 export const footerList = [
   {
+    id: 1,
     title: "Find me",
     links: [
       {
@@ -78,6 +79,7 @@ export const footerList = [
     ],
   },
   {
+    id: 2,
     title: "Credits",
     links: [
       {

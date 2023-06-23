@@ -24,7 +24,9 @@ function Footer() {
     <section className="mx-auto max-w-[1200px] p-8 md:p-16 md:pt-24">
       <div className="flex gap-8 md:gap-12">
         {footerList.map((data) => {
-          return <FooterList title={data.title} links={data.links} />;
+          return (
+            <FooterList key={data.id} title={data.title} links={data.links} />
+          );
         })}
       </div>
       <p className="mt-8 flex items-center gap-2 text-sm">
