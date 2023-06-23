@@ -1,36 +1,33 @@
 import React from "react";
 import Link from "next/link";
-import Quotes from "./Quotes";
-import { Suspense } from "react";
+import { footerList } from "@/constant";
+
+function FooterList({ title, links }) {
+  return (
+    <div>
+      <h3>{title}</h3>
+      <div className="flex flex-col gap-2 mt-3">
+        {links.map((link) => {
+          return (
+            <Link href={link.linkSource} target="_blank">
+              <p className="text-lg">{link.linkName}</p>
+            </Link>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 function Footer() {
   return (
-    <section className="mx-auto max-w-[1200px] p-8 md:p-16 md:pt-24 ">
-      <div>
-        <h3>
-          Find me <span className="inline-block animate-bounce">🫰</span>
-        </h3>
-        <div className="mt-4 flex flex-col gap-8 justify-between md:flex-row">
-          <div className="flex flex-col gap-2">
-            <Link
-              href={"https://linkedin.com/in/baillah"}
-              target="_blank"
-              className=""
-            >
-              <p className="">Linkedin</p>
-            </Link>
-            <Link
-              href={"https://github.com/baicorp"}
-              target="_blank"
-              className="inline"
-            >
-              <p className="">Github</p>
-            </Link>
-          </div>
-          <div className=""></div>
-        </div>
+    <section className="mx-auto max-w-[1200px] p-8 md:p-16 md:pt-24">
+      <div className="flex gap-8 md:gap-12">
+        {footerList.map((data) => {
+          return <FooterList title={data.title} links={data.links} />;
+        })}
       </div>
-      <p className="mt-8 flex items-center gap-2">
+      <p className="mt-8 flex items-center gap-2 text-sm">
         ©️ {new Date().getFullYear()} <span className="text-sm">•</span> Bagus
         Atok Illah
       </p>
