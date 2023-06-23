@@ -60,3 +60,31 @@ export const techSkills = [
   { id: 14, logoName: "firebase", logo: "/tech-logo/firebase.svg" },
   { id: 15, logoName: "git", logo: "/tech-logo/git.svg" },
 ];
+
+export const footerList = [
+  {
+    title: "Find me",
+    links: [
+      {
+        id: 1,
+        linkSource: "https://linkedin.com/in/baillah",
+        linkName: "LinkedIn",
+      },
+      {
+        id: 2,
+        linkSource: "https://github.com/baicorp",
+        linkName: "Github",
+      },
+    ],
+  },
+  {
+    title: "Credits",
+    links: [
+      {
+        id: 1,
+        linkSource: "https://docs.quotable.io/",
+        linkName: "Quoatable API",
+      },
+    ],
+  },
+];
