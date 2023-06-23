@@ -34,33 +34,17 @@ h4 {
 }
 
 h1 {
-  font-size: 3.025rem;
+  font-size: clamp(3.025rem, 7.334vw + 1.306rem, 6rem);
 }
 h2 {
-  font-size: 1.953rem;
+  font-size: clamp(1.938rem, 1.387vw + 1.612rem, 2.5rem);
 }
 h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 0.616vw + 1.106rem, 1.5rem);
 }
 p,
 li {
   font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: clamp(1rem, 0.616vw + 0.856rem, 1.25rem);
   color: #d4ede4;
-}
-
-@media only screen and (min-width: 1024px) {
-  h1 {
-    font-size: 6rem;
-  }
-  h2 {
-    font-size: 2.5rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  p {
-    font-size: 1.25rem;
-  }
 }
