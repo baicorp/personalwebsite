@@ -1,6 +1,6 @@
 export const projects = [
   {
-    id: 1,
+    id: crypto.randomUUID(),
     title: "Wijaya Kusuma Kost",
     description:
       "Build a boarding management system that integrates a content management system (CMS) and utilizes a Supabase database.",
@@ -9,7 +9,7 @@ export const projects = [
     tech: ["next js", "supabase", "tailwind css"],
   },
   {
-    id: 2,
+    id: crypto.randomUUID(),
     title: "Bai Quiz",
     description: "Build fun quiz using open trivia database API.",
     logo: "/project-logo/quiz.webp",
@@ -17,7 +17,7 @@ export const projects = [
     tech: ["html", "css", "javaScript"],
   },
   {
-    id: 5,
+    id: crypto.randomUUID(),
     title: "BRI UI Clone",
     description: "Try flutter to create mobile UI of BRI bank.",
     image: "/project-logo/bri-bank.webp",
@@ -25,16 +25,16 @@ export const projects = [
     tech: ["dart", "flutter", "firebase"],
   },
   {
-    id: 4,
-    title: "UI Web Architec",
+    id: crypto.randomUUID(),
+    title: "UI Web Architect",
     description:
       "Implementing a mobile-first approach and utilizing Tailwind CSS to achieve responsive design.",
-    image: "/project-logo/architech web.webp",
-    link: "https://github.com/baicorp/Web-Architech",
+    image: "/project-logo/architect web.webp",
+    link: "https://github.com/baicorp/Web-Architect",
     tech: ["vite", "react", "tailwind css"],
   },
   {
-    id: 3,
+    id: crypto.randomUUID(),
     title: "Bai Note",
     description: "Organize and record your ideas easily with notes.",
     logo: "/project-logo/note.png",
@@ -44,46 +44,72 @@ export const projects = [
 ];
 
 export const techSkills = [
-  { id: 1, logoName: "html", logo: "/tech-logo/html.svg" },
-  { id: 2, logoName: "css", logo: "/tech-logo/css.svg" },
-  { id: 3, logoName: "javaScript", logo: "/tech-logo/javaScript.svg" },
-  { id: 4, logoName: "python", logo: "/tech-logo/python.svg" },
-  { id: 5, logoName: "react", logo: "/tech-logo/react.svg" },
-  { id: 6, logoName: "node js", logo: "/tech-logo/node js.svg" },
-  { id: 7, logoName: "vite", logo: "/tech-logo/vite.svg" },
-  { id: 8, logoName: "tailwind css", logo: "/tech-logo/tailwind css.svg" },
-  { id: 9, logoName: "next js", logo: "/tech-logo/next js.svg" },
-  { id: 10, logoName: "sql", logo: "/tech-logo/sql.svg" },
-  { id: 11, logoName: "supabase", logo: "/tech-logo/supabase.svg" },
-  { id: 12, logoName: "dart", logo: "/tech-logo/dart.svg" },
-  { id: 13, logoName: "flutter", logo: "/tech-logo/flutter.svg" },
-  { id: 14, logoName: "firebase", logo: "/tech-logo/firebase.svg" },
-  { id: 15, logoName: "git", logo: "/tech-logo/git.svg" },
+  { id: crypto.randomUUID(), logoName: "html", logo: "/tech-logo/html.svg" },
+  { id: crypto.randomUUID(), logoName: "css", logo: "/tech-logo/css.svg" },
+  {
+    id: crypto.randomUUID(),
+    logoName: "javaScript",
+    logo: "/tech-logo/javaScript.svg",
+  },
+  {
+    id: crypto.randomUUID(),
+    logoName: "python",
+    logo: "/tech-logo/python.svg",
+  },
+  { id: crypto.randomUUID(), logoName: "vite", logo: "/tech-logo/vite.svg" },
+  { id: crypto.randomUUID(), logoName: "react", logo: "/tech-logo/react.svg" },
+  {
+    id: crypto.randomUUID(),
+    logoName: "typescript",
+    logo: "/tech-logo/typescript.svg",
+  },
+  {
+    id: crypto.randomUUID(),
+    logoName: "next js",
+    logo: "/tech-logo/next js.svg",
+  },
+  {
+    id: crypto.randomUUID(),
+    logoName: "tailwind css",
+    logo: "/tech-logo/tailwind css.svg",
+  },
+  {
+    id: crypto.randomUUID(),
+    logoName: "node js",
+    logo: "/tech-logo/node js.svg",
+  },
+  { id: crypto.randomUUID(), logoName: "sql", logo: "/tech-logo/sql.svg" },
+  {
+    id: crypto.randomUUID(),
+    logoName: "supabase",
+    logo: "/tech-logo/supabase.svg",
+  },
+  { id: crypto.randomUUID(), logoName: "git", logo: "/tech-logo/git.svg" },
 ];
 
 export const footerList = [
   {
-    id: 1,
+    id: crypto.randomUUID(),
     title: "Find me",
     links: [
       {
-        id: 1,
+        id: crypto.randomUUID(),
         linkSource: "https://linkedin.com/in/baillah",
         linkName: "LinkedIn",
       },
       {
-        id: 2,
+        id: crypto.randomUUID(),
         linkSource: "https://github.com/baicorp",
         linkName: "Github",
       },
     ],
   },
   {
-    id: 2,
+    id: crypto.randomUUID(),
     title: "Credits",
     links: [
       {
-        id: 1,
+        id: crypto.randomUUID(),
         linkSource: "https://docs.quotable.io/",
         linkName: "Quoatable API",
       },
