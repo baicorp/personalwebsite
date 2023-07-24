@@ -1,4 +1,4 @@
-export const projects = [
+export const projects: ProjectItem[] = [
   {
     id: crypto.randomUUID(),
     title: "Wijaya Kusuma Kost",
@@ -43,7 +43,7 @@ export const projects = [
   },
 ];
 
-export const techSkills = [
+export const techSkills: TechSkills[] = [
   { id: crypto.randomUUID(), logoName: "html", logo: "/tech-logo/html.svg" },
   { id: crypto.randomUUID(), logoName: "css", logo: "/tech-logo/css.svg" },
   {
@@ -87,7 +87,7 @@ export const techSkills = [
   { id: crypto.randomUUID(), logoName: "git", logo: "/tech-logo/git.svg" },
 ];
 
-export const footerList = [
+export const footerList: FooterListItem[] = [
   {
     id: crypto.randomUUID(),
     title: "Find me",

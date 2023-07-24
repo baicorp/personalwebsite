@@ -10,7 +10,7 @@ export default function ProjectCard({
   link,
   image,
   tech,
-}) {
+}: ProjectItemProps) {
   return (
     <Link
       href={link}

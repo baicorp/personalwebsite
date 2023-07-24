@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-export default function TechSkillsCard({ logoName, logo }) {
+export default function TechSkillsCard({ logoName, logo }: TechSkillsProps) {
   return (
     <div className="flex-auto hover:scale-110 duration-150 group/bg relative border border-slate-600 flex items-center gap-2 p-4 rounded-lg overflow-hidden md:flex-none">
       <Image

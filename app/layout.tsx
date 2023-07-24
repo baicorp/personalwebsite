@@ -9,7 +9,11 @@ export const metadata = {
     "I am a front-end developer specializing in creating captivating and responsive user interfaces.",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className="bg-[#233831] selection:text-[#233831] selection:bg-[#8fdcc2]">

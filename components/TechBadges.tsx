@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-export default function TechBadges({ title }) {
+export default function TechBadges({ title }: { title: string }) {
   return (
     <div className="p-[4px] flex items-center space-x-2 rounded-lg bg-[#233831]">
       <Image

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { footerList } from "@/constant";
 
-function FooterList({ title, links }) {
+function FooterList({ title, links }: FooterListItemProps) {
   return (
     <div>
       <h3>{title}</h3>
