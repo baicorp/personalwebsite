@@ -110,8 +110,8 @@ export const footerList: FooterListItem[] = [
     links: [
       {
         id: crypto.randomUUID(),
-        linkSource: "https://docs.quotable.io/",
-        linkName: "Quoatable API",
+        linkSource: "https://dummyjson.com/",
+        linkName: "Dummyjson/quotes",
       },
     ],
   },

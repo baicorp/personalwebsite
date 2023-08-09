@@ -1,18 +1,44 @@
 import React from "react";
 
+interface Quote {
+  id: string;
+  quote: string;
+  author: string;
+}
+
+async function getQuote(id: number): Promise<Quote> {
+  try {
+    if (id === 36) {
+      id += 1;
+    }
+    const res = await fetch(`https://dummyjson.com/quotes/${id}`, {
+      cache: "no-store",
+    });
+    if (!res.ok) {
+      throw new Error(
+        `failed to fetch data. Status: ${res.status} ${res.statusText}`
+      );
+    }
+    return res.json();
+  } catch (error) {
+    throw error;
+  }
+}
+
 export default async function Quotes() {
-  const res = await fetch("https://api.quotable.io/quotes/random", {
-    next: { revalidate: 0 },
-  });
-  const quote = await res.json();
+  const id = Math.ceil(Math.random() * 100);
+  let quote = { id: "0", quote: "Anyone anything", author: "Bagus Atok Illah" };
+
+  try {
+    quote = await getQuote(id);
+  } catch (error) {
+    console.log(error.message);
+  }
+
   return (
-    <div>
-      <h2 className="selection:text-[#8fdcc2] selection:bg-[#233831] text-[#233831] bg-[#8fdcc2] relative text-center font-bold">
-        {`"${quote[0]?.content || "..."}"`}
-      </h2>
-      <h3 className="selection:text-[#233831] selection:bg-[#8fdcc2] text-right mt-4">{`— ${
-        quote[0]?.author || "..."
-      }`}</h3>
+    <div className="max-w-3xl">
+      <h2 className="text-2xl text-justify font-bold">{quote.quote}</h2>
+      <p className="text-right mt-4">{quote.author}</p>
     </div>
   );
 }
