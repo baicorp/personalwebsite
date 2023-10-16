@@ -1,7 +1,8 @@
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/Footer";
+import { Navbar, Body, Footer } from "@/components";
+import ThemeProvider from "@/context/ThemeProvider";
+import Script from "next/script";
 
 export const metadata = {
   title: "Bagus Atok Illah",
@@ -16,12 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-[#233831] selection:text-[#233831] selection:bg-[#8fdcc2]">
-        <Navbar />
-        {children}
-        <Footer />
-        <Analytics />
-      </body>
+      <ThemeProvider>
+        <Body>
+          <Navbar />
+          {children}
+          <Footer />
+          <Analytics />
+        </Body>
+      </ThemeProvider>
     </html>
   );
 }

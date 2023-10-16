@@ -15,14 +15,14 @@ export default function ProjectCard({
     <Link
       href={link}
       target="_blank"
-      className={`bg-[#1f4338] outline outline-1 outline-white/20 overflow-hidden flex flex-col gap-4 p-4 rounded-lg md:p-8 hover:-translate-y-1 duration-500 ${
+      className={`bg-card-background border border-card-border overflow-hidden flex flex-col gap-4 p-4 rounded-lg md:p-8 hover:-translate-y-1 ${
         image ? "row-span-2" : ""
       }`}
     >
       <div className="flex justify-between space-x-4 items-center">
         <div className="space-y-6">
           <h3>{title}</h3>
-          <p className="md:tracking-wide">{description}</p>
+          <p className="md:tracking-wider">{description}</p>
         </div>
         {logo && (
           <Image
@@ -30,7 +30,7 @@ export default function ProjectCard({
             width={50}
             height={50}
             alt={`${title}-icon`}
-            className="w-24 h-24 object-contain rounded-full"
+            className="w-24 h-24 object-contain border-2 border-card-border rounded-full"
           />
         )}
       </div>

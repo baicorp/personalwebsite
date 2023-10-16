@@ -2,15 +2,40 @@ import React from "react";
 import Link from "next/link";
 import { footerList } from "@/constant";
 
-function FooterList({ title, links }: FooterListItemProps) {
+export default function Footer() {
+  console.log("footer");
+  return (
+    <footer className="max-w-[1200px] mx-auto px-5 py-8  md:p-16 space-y-12">
+      <FooterList footerList={footerList} />
+      <p className="text-text-color flex items-center gap-2 text-sm">
+        ©️ {new Date().getFullYear()} <span className="text-sm">•</span> Bagus
+        Atok Illah
+      </p>
+    </footer>
+  );
+}
+
+function FooterList({ footerList }: { footerList: FooterListItem[] }) {
+  return (
+    <div className="flex gap-8 md:gap-12">
+      {footerList.map((data) => {
+        return (
+          <FooterItem key={data.id} title={data.title} links={data.links} />
+        );
+      })}
+    </div>
+  );
+}
+
+function FooterItem({ title, links }: FooterListItemProps): JSX.Element {
   return (
     <div>
-      <h3>{title}</h3>
+      <h3 className="text-headings-color">{title}</h3>
       <div className="flex flex-col gap-2 mt-3">
         {links.map((link) => {
           return (
             <Link key={link.id} href={link.linkSource} target="_blank">
-              <p className="text-lg">{link.linkName}</p>
+              <p className="text-text-color md:text-lg">{link.linkName}</p>
             </Link>
           );
         })}
@@ -18,23 +43,3 @@ function FooterList({ title, links }: FooterListItemProps) {
     </div>
   );
 }
-
-function Footer() {
-  return (
-    <section className="mx-auto max-w-[1200px] p-8 md:p-16 md:pt-24">
-      <div className="flex gap-8 md:gap-12">
-        {footerList.map((data) => {
-          return (
-            <FooterList key={data.id} title={data.title} links={data.links} />
-          );
-        })}
-      </div>
-      <p className="mt-8 flex items-center gap-2 text-sm">
-        ©️ {new Date().getFullYear()} <span className="text-sm">•</span> Bagus
-        Atok Illah
-      </p>
-    </section>
-  );
-}
-
-export default Footer;

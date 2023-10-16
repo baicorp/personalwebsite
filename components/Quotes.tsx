@@ -12,7 +12,7 @@ async function getQuote(id: number): Promise<Quote> {
       id += 1;
     }
     const res = await fetch(`https://dummyjson.com/quotes/${id}`, {
-      cache: "no-store",
+      cache: "no-cache",
     });
     if (!res.ok) {
       throw new Error(
@@ -36,8 +36,8 @@ export default async function Quotes() {
   }
 
   return (
-    <div className="max-w-3xl">
-      <h2 className="text-2xl text-justify font-bold">{quote.quote}</h2>
+    <div className="max-w-3xl mx-auto">
+      <h2 className="text-2xl md:text-justify font-bold">{quote.quote}</h2>
       <p className="text-right mt-4">{quote.author}</p>
     </div>
   );

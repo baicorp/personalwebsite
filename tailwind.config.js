@@ -7,18 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-      gridTemplateColumns: {
-        autofill: "repeat(auto-fill, minmax(0, 1fr))",
-        autofit: "repeat(auto-fit, minmax(0, 1fr))",
-      },
-      gridTemplateRows: {
-        autofill: "repeat(1fr, minmax(1fr, 1fr))",
-        autofit: "repeat(auto-fit, minmax(0, 1fr))",
+      colors: {
+        "main-background": "var(--background-main)",
+        "accent-color": "var(--accent-color)",
+        "card-background": "var(--background-card)",
+        "card-border": "var(--border-card)",
+        "headings-color": "var(--color-heading)",
+        "text-color": "var(--color-text)",
+        "selection-background": "var(--selection-background)",
+        "selection-text": "var(--selection-text)",
       },
     },
   },
