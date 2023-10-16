@@ -116,3 +116,36 @@ export const footerList: FooterListItem[] = [
     ],
   },
 ];
+
+export const blogPosts = [
+  {
+    id: 1,
+    title: "Bun 1.0 is Here",
+    date: "07/09/2023",
+    img: "/project-logo/quiz.webp",
+  },
+  {
+    id: 2,
+    title: "Bun 1.0 is Here",
+    date: "07/09/2023",
+    img: "/project-logo/quiz.webp",
+  },
+  {
+    id: 3,
+    title: "Bun 1.0 is Here",
+    date: "07/09/2023",
+    img: "/project-logo/quiz.webp",
+  },
+  {
+    id: 4,
+    title: "Bun 1.0 is Here",
+    date: "07/09/2023",
+    img: "/project-logo/quiz.webp",
+  },
+  {
+    id: 5,
+    title: "Bun 1.0 is Here",
+    date: "07/09/2023",
+    img: "/project-logo/quiz.webp",
+  },
+];
