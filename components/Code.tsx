@@ -23,42 +23,33 @@ SyntaxHighlighter.registerLanguage("python", python);
 SyntaxHighlighter.registerLanguage("json", json);
 SyntaxHighlighter.registerLanguage("bash", bash);
 
-export default function Code({
-  children,
-  language,
-}: {
-  children: string;
-  language: string | undefined;
-}): JSX.Element {
-  console.log("class prop nih bos : " + language);
+export default function Code({ children, language }: CodeProps): JSX.Element {
+  return <PreSyntaxHighlighter language={language} children={children} />;
+}
 
-  if (typeof language === "undefined") {
-    console.log(language);
-    return (
-      <code className="p-[1px] text-base md:text-lg rounded-sm border border-card-border text-text-color bg-card-background">
+function PreSyntaxHighlighter({ language, children }: CodeProps) {
+  return (
+    <div className="text-end border border-[#f3f5f726] bg-black rounded-md overflow-hidden">
+      <p className="text-sm py-2 pr-4 m-0 border-b border-[#f3f5f726] text-white">
+        {language.replace("language-", "")}
+      </p>
+      <SyntaxHighlighter
+        style={oneDark}
+        customStyle={{
+          margin: 0,
+          paddingTop: "1.25rem",
+          paddingBottom: "1.25rem",
+          fontSize: "15px",
+          backgroundColor: "#0a0a0a",
+        }}
+        showLineNumbers
+        language={language.replace("language-", "")}
+        CodeTag={({ children }) => (
+          <code className="text-xs md:text-[.94rem]">{children}</code>
+        )}
+      >
         {children}
-      </code>
-    );
-  } else {
-    const extractedLang = language.replace("lang-", "");
-    return (
-      <div className="text-end border border-[#f3f5f726] bg-[#23272e] rounded-md overflow-hidden">
-        <p className="text-sm py-1 pr-4 m-0 border-b border-[#f3f5f726] text-[#d4d4d4]">
-          {extractedLang}
-        </p>
-        <SyntaxHighlighter
-          style={oneDark}
-          customStyle={{
-            margin: 0,
-            paddingRight: "2rem",
-            paddingLeft: "2rem",
-            fontSize: "15px",
-          }}
-          language={extractedLang}
-        >
-          {children}
-        </SyntaxHighlighter>
-      </div>
-    );
-  }
+      </SyntaxHighlighter>
+    </div>
+  );
 }

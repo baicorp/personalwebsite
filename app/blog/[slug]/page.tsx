@@ -1,81 +1,47 @@
-// import React from "react";
-// import Markdown from "markdown-to-jsx";
-// import fs from "fs";
-// import Link from "next/link";
-
 import React from "react";
-import fs from "fs/promises"; // Import fs with promises support
-import path from "path";
+import fs from "node:fs";
 import Link from "next/link";
-import MarkdownWithCodeHighlight from "@/components/MarkdownFormated";
+import { CustomMDX } from "@/components/CustomMdxRemote";
+import matter from "gray-matter";
 
-export default async function page({
+export default async function Page({
   params: { slug },
 }: {
   params: { slug: string };
 }) {
-  // const filePath = `posts/${slug}.md`;
-  // const markdownContent = readMarkdownFile(filePath);
+  let markdownContent: string | null;
 
-  // async function readMarkdownFile(filePath: string): Promise<string | null> {
-  //   try {
-  //     const response = await fetch(filePath);
-  //     if (response.ok) {
-  //       const content = await response.text();
-  //       return content;
-  //     } else {
-  //       console.error(
-  //         `Error fetching file: ${response.status} ${response.statusText}`
-  //       );
-  //       return null;
-  //     }
-  //   } catch (error) {
-  //     console.error(`Error: ${error}`);
-  //     return null;
-  //   }
-  // }
-
-  async function readMarkdownFile(filePath: string): Promise<string | null> {
-    try {
-      const content = await fs.readFile(filePath, "utf-8");
-      return content;
-    } catch (error) {
-      console.error(`Error reading file: ${error}`);
-      return null;
-    }
+  try {
+    const postContent = fs.readFileSync(
+      `./posts/${slug.replaceAll("-", " ")}.mdx`,
+      "utf8"
+    );
+    //matter return an obejct {data, content} data for frontmatter, content for the markdown data
+    const { content } = matter(postContent);
+    markdownContent = content;
+  } catch (error) {
+    markdownContent = null;
   }
-
-  const filePath = path.join(process.cwd(), `posts/${slug}.md`);
-
-  // const filePath = `posts/${slug}.md`;
-
-  const res = await readMarkdownFile(filePath);
-  const markdownContent = res;
 
   return (
     <main>
-      <section className="max-w-[728px] mx-auto px-5 py-8 overflow-hidden space-y-12">
+      <section className="max-w-[728px] mx-auto px-5 py-8 overflow-hidden">
         {markdownContent ? (
-          <article className="article">
-            <MarkdownWithCodeHighlight content={markdownContent} />
+          <article>
+            <CustomMDX source={markdownContent} />
           </article>
         ) : (
-          <p>
-            Something Wrong,
-            <Link href={"/blog"}>back to blog </Link>
-          </p>
+          <>
+            <p className="font-black text-9xl">404</p>
+            <Link
+              href={"/blog"}
+              className="text-[#0072f5] hover:underline hover:decoration-wavy"
+            >
+              back to blog{" "}
+            </Link>
+          </>
         )}
       </section>
     </main>
   );
 }
-
-// function readMarkdownFile(filePath: string): string | null {
-//   try {
-//     const content = fs.readFileSync(filePath, "utf-8");
-//     return content;
-//   } catch (error) {
-//     console.error(`Error reading file: ${error}`);
-//     return null;
-//   }
-// }
