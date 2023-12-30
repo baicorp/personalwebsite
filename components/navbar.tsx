@@ -22,8 +22,6 @@ export default function Navbar() {
     setTheme(theme);
   }
 
-  console.log("navigation");
-
   return (
     <header className="z-50 flex items-center sticky top-0 backdrop-blur-sm">
       <nav className="px-5 py-5 w-full">
@@ -34,7 +32,10 @@ export default function Navbar() {
           >
             — bai.dev
           </Link>
-          <ThemeSwitcher theme={theme} changeTheme={changeTheme} />
+          <div className="flex gap-8 items-center">
+            <Link href={"/blog"}>Blog</Link>
+            <ThemeSwitcher theme={theme} changeTheme={changeTheme} />
+          </div>
         </div>
       </nav>
     </header>
@@ -46,7 +47,7 @@ function ThemeSwitcher({ theme, changeTheme }): JSX.Element {
     <button
       type="button"
       aria-label="theme button"
-      className="flex gap-2 w-10 h-10 p-2 border border-card-border bg-card-background rounded-lg ml-8"
+      className="flex gap-2 w-10 h-10 p-2 border border-card-border bg-card-background rounded-lg"
       onClick={() => {
         changeTheme(theme === "light" ? "dark" : "light");
       }}

@@ -8,7 +8,6 @@ export default function TechBadges({
   title: string;
   small?: boolean;
 }) {
-  console.log("tech badges");
   return (
     <span
       className={`${

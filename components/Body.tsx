@@ -6,7 +6,6 @@ import React, { ReactNode, useEffect } from "react";
 export default function Body({ children }: { children: ReactNode }) {
   const { theme } = useThemeContext();
 
-  console.log("body");
   return (
     <body
       className={`${

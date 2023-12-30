@@ -3,7 +3,6 @@ import Link from "next/link";
 import { footerList } from "@/constant";
 
 export default function Footer() {
-  console.log("footer");
   return (
     <footer className="max-w-[1200px] mx-auto px-5 py-8  md:p-16 space-y-12">
       <FooterList footerList={footerList} />

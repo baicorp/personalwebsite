@@ -5,7 +5,10 @@ import ThemeProvider from "@/context/ThemeProvider";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Bagus Atok Illah",
+  title: {
+    default: "Bagus Atok Illah",
+    template: "%s | Bagus Atok Illah",
+  },
   description:
     "I am a front-end developer specializing in creating captivating and responsive user interfaces.",
 };

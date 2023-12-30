@@ -39,21 +39,6 @@
     --selection-text: var(--background-main);
   }
 
-  .article {
-    --text-h1: clamp(1.75rem, 5.089vw + 0.557rem, 3rem);
-    --text-h2: clamp(1.25rem, 2.036vw + 0.773rem, 1.75rem);
-    --text-h3: clamp(1.25rem, 3.053vw + 0.534rem, 2rem);
-    --text-p: clamp(1rem, 1.018vw + 0.761rem, 1.25rem);
-    --text-h1-mb: 2rem;
-    --text-h2-mt: 2.5rem;
-    --text-h3-mt: 1.5rem;
-    --text-p-mt: 1rem;
-    --letter-spacing: 0.8px;
-    --img-w: 100%;
-    --img-radius: 8px;
-    --img-fit: cover;
-  }
-
   h1,
   h2,
   h3,
@@ -81,74 +66,18 @@
     margin-top: var(--text-h3-mt);
   }
 
-  blockquote,
-  table,
-  img,
-  p,
-  pre,
-  ul,
-  hr {
-    margin-top: var(--text-p-mt);
-  }
-
-  ol,
-  ul {
-    margin-top: 0.5rem;
-  }
-
-  p {
-    letter-spacing: var(--letter-spacing);
-  }
-
   p,
   li,
-  td {
+  td,
+  a {
     color: var(--color-text);
-  }
-
-  p,
-  li {
     font-size: var(--text-p);
     font-family: "Lato", sans-serif;
     letter-spacing: 0.03em;
   }
 
-  ul {
-    list-style: disc;
-  }
-
-  ol {
-    list-style: decimal;
-  }
-
-  ul,
-  ol {
-    padding-left: 1.5rem;
-  }
-
-  li {
-    padding-left: 1rem;
-  }
-
   hr {
     border: 1.5px solid var(--border-card);
-  }
-
-  img {
-    width: var(--img-w);
-    border-radius: var(--img-radius);
-    object-fit: var(--img-fit);
-  }
-
-  blockquote {
-    font-style: italic;
-    padding: 20px 17px 20px 1rem;
-    border-left: 4px solid var(--accent-color);
-    background-color: var(--background-card);
-  }
-
-  blockquote p {
-    margin: 0;
   }
 
   table {
@@ -181,7 +110,6 @@
 
 *::-webkit-scrollbar-track {
   background: #222;
-  border-radius: 5px;
 }
 
 *::-webkit-scrollbar-thumb {

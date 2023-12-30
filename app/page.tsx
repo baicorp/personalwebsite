@@ -4,7 +4,6 @@ import { ProjectCard, Quotes, TechBadges, TechSkillsCard } from "@/components";
 import { Suspense } from "react";
 
 export default function Home() {
-  console.log("home rendered");
   return (
     <main>
       <section className="max-w-[1200px] mx-auto px-4 py-8 md:p-16 space-y-12">
@@ -91,7 +90,6 @@ export default function Home() {
         </h2>
         <div className="flex gap-4 flex-wrap md:justify-center">
           {techSkills.map((data) => {
-            console.log("tech skills");
             return (
               <TechSkillsCard
                 key={data.id}
@@ -118,7 +116,6 @@ export default function Home() {
         </p>
         <div className="grid grid-flow-dense gap-6 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((data) => {
-            console.log("project card");
             return (
               <ProjectCard
                 key={data.id}
