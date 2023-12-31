@@ -65,9 +65,9 @@ export default function Home() {
             </h2>
             <p>
               At this time, I am actively working on expanding my knowledge of{" "}
-              {<TechBadges title="react" small />}. Additionally, I am exploring{" "}
-              {<TechBadges title="next js" small />} and experimenting with the{" "}
-              {<TechBadges title="supabase" small />} database.
+              {<TechBadges title="react" />}. Additionally, I am exploring{" "}
+              {<TechBadges title="next js" />} and experimenting with the{" "}
+              {<TechBadges title="supabase" />} database.
             </p>
             <p>
               I make sure to keep myself updated with the latest happenings in

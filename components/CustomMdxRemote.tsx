@@ -1,9 +1,7 @@
-// components/mdx-remote.js
-
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { MDXComponents } from "mdx/types";
 import Image, { ImageProps } from "next/image";
-import Code from "./Code";
+import PreSyntaxHighlighter from "./PreSyntaxHighlighter";
 import { ReactElement } from "react";
 
 const components: MDXComponents = {
@@ -46,20 +44,23 @@ const components: MDXComponents = {
     <Image
       width={1000}
       height={1000}
-      className="w-full h-auto rounded-lg"
+      alt="post image"
+      className="w-auto h-auto mx-auto rounded-lg"
       {...(props as ImageProps)}
     />
   ),
   code: ({ children }) => (
-    <code className="p-[1px] text-base rounded-sm border border-card-border text-text-color bg-[#2a2828]">
+    <code className="p-[1px] text-base rounded-sm border border-card-border text-text-color bg-code-background">
       {children}
     </code>
   ),
+  //pre tag will pass children which is code tag that have props data {className, children}
   pre: ({ children }: { children: ReactElement }) => {
+    const { props } = children;
     return (
-      <Code language={children.props?.className}>
-        {children.props?.children}
-      </Code>
+      <PreSyntaxHighlighter language={props?.className}>
+        {props?.children}
+      </PreSyntaxHighlighter>
     );
   },
   blockquote: ({ children }) => (

@@ -1,18 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-export default function TechBadges({
-  title,
-  small,
-}: {
-  title: string;
-  small?: boolean;
-}) {
+export default function TechBadges({ title }: { title: string }) {
   return (
     <span
-      className={`${
-        small ? "p-[2px]" : "p-1"
-      } inline-flex items-center space-x-2 rounded-lg bg-main-background border border-card-border`}
+      className={`p-1 inline-flex items-center space-x-2 rounded-lg bg-main-background border border-card-border`}
     >
       <Image
         src={`/tech-logo/${title}.svg`}
@@ -21,9 +13,7 @@ export default function TechBadges({
         alt={`${title} logo`}
         className="w-4 h-4 object-contain"
       />
-      <span className={`text-text-color ${small ? "text-sm" : ""}`}>
-        {title}
-      </span>
+      <span className="text-text-color text-sm">{title}</span>
     </span>
   );
 }

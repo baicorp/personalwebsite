@@ -19,6 +19,7 @@
     --color-text: #2c2c2c;
     --background-main: #fffaf4;
     --background-card: #f8f1e59d;
+    --background-code: #f8f1e576;
     --border-card: #c4bcab;
     --accent-color: #dac0a3;
     --selection-background: var(--color-heading);
@@ -34,6 +35,7 @@
     --color-text: #ddd;
     --background-main: #050505;
     --background-card: #101010;
+    --background-code: #2a2828;
     --border-card: #f3f5f726;
     --selection-background: var(--color-heading);
     --selection-text: var(--background-main);

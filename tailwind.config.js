@@ -14,6 +14,7 @@ module.exports = {
         "main-background": "var(--background-main)",
         "accent-color": "var(--accent-color)",
         "card-background": "var(--background-card)",
+        "code-background": "var(--background-code)",
         "card-border": "var(--border-card)",
         "headings-color": "var(--color-heading)",
         "text-color": "var(--color-text)",

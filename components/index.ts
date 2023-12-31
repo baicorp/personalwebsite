@@ -5,7 +5,7 @@ import TechBadges from "./TechBadges";
 import ProjectCard from "./projectCard";
 import TechSkillsCard from "./TechSkillsCard";
 import Body from "./Body";
-import Code from "./Code";
+import PreSyntaxHighlighter from "./PreSyntaxHighlighter";
 import ListBlogPost from "./ListBlogPost";
 import { CustomMDX } from "./CustomMdxRemote";
 
@@ -17,7 +17,7 @@ export {
   TechBadges,
   TechSkillsCard,
   ProjectCard,
-  Code,
+  PreSyntaxHighlighter,
   ListBlogPost,
   CustomMDX,
 };

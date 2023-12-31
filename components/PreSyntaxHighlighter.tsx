@@ -23,11 +23,10 @@ SyntaxHighlighter.registerLanguage("python", python);
 SyntaxHighlighter.registerLanguage("json", json);
 SyntaxHighlighter.registerLanguage("bash", bash);
 
-export default function Code({ children, language }: CodeProps): JSX.Element {
-  return <PreSyntaxHighlighter language={language} children={children} />;
-}
-
-function PreSyntaxHighlighter({ language, children }: CodeProps) {
+export default function PreSyntaxHighlighter({
+  language,
+  children,
+}: CodeProps) {
   return (
     <div className="text-end border border-[#f3f5f726] bg-black rounded-md overflow-hidden">
       <p className="text-sm py-2 pr-4 m-0 border-b border-[#f3f5f726] text-white">
