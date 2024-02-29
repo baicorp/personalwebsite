@@ -15,7 +15,7 @@ export const projects: ProjectItem[] = [
       "The 'Responsive Vokemons UI' seamlessly blends the joy of Pokémon with a responsive design to ensure a smooth experience on both mobile and desktop devices.",
     image: "/project-images/vokemons.webp",
     link: "https://candid-panda-c3abab.netlify.app",
-    tech: ["html", "javascript", "css", "tailwind css"],
+    tech: ["html", "javaScript", "css", "tailwind css"],
   },
   {
     id: crypto.randomUUID(),
