@@ -40,10 +40,7 @@ export default function ListBlogPost() {
 
 function Article({ title, image, date }: ArticleMetadata) {
   return (
-    <article
-      key={crypto.randomUUID()}
-      className="p-4 border border-card-border rounded-lg hover:bg-card-background "
-    >
+    <article className="p-4 border border-card-border rounded-lg hover:bg-card-background ">
       <Image
         src={`${image}`}
         width={80}

@@ -2,7 +2,6 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Navbar, Body, Footer } from "@/components";
 import ThemeProvider from "@/context/ThemeProvider";
-import Script from "next/script";
 
 export const metadata = {
   title: {

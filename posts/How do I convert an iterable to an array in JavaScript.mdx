@@ -1,0 +1,85 @@
+---
+title: How do I convert an iterable to an array in JavaScript
+image: "/dummy-image.png"
+date: October 23, 2023
+---
+
+# How do I convert an iterable to an array in JavaScript?
+
+<img src="/dummy-image.png" alt="post image" className="w-full h-auto" />
+
+You clicked on that link with high expectations. You knew you were about to find the answers you’d been searching for. Then it happened. You saw the dreaded 404 error letting you know that the content you were looking for wasn’t there. Maybe the content lives at a new location or perhaps it’s been permanently removed. Regardless of the reason, your high hopes have been dashed and you’re left to begin your search again.
+
+> I’m thankful for my kiddos. They amaze me all the time. I’m a pretty lucky dad.
+> — CodeAndData
+
+It’s a terrible experience and one we wanted to make better. But before we get into the details of what we’ve done, let’s talk about where the idea started.
+
+## To Those About to Hack, We Salute You
+
+At Deepgram, we have a goal that every `` Use `code` in your Markdown file. `` interaction with us should be pleasant and (hopefully) enjoyable. We spend a lot of time thinking of how to make that happen. One of the methods we use for brainstorming ideas and gathering feedback is hosting internal hack-a-thons (known internally as GRAMJAMs.) Last year, 8 teams competed to be the GRAMJAM champion and one of the entries was a super fun game called MadGab.
+
+The premise was simple: present the user with a nonsensical phrase that is phonetically similar to a real-life phrase. Players would read the nonsensical phrase aloud and attempt to then say the associated real-life phrase. An example would be “mass turk hard” in the place of “Mastercard.” It was a great experience. The game’s format was simple to understand and perform and it was highly addictive. We knew immediately that we had to make this available for others. This brings us back to the 404 page.
+
+## Making it Helpful How do I convert an iterable to an array in JavaScript?
+
+[Attio](http://google.com "Attio") is a next-generation CRM that combines a powerful data model with the magical user experience of no-code software. It’s a CRM that is is nothing short of magic. With an impressive data architecture at its core, Attio provides unparalleled flexibility and use cases to supercharge teams’ ops, sales, and more. It has become the go-to choice for leading startup & growth teams around the world.
+
+Attio pursues a Product-Led Growth (PLG) strategy - underpinned by users that love and spread their product via word of mouth. As love of Attio spread across social media, the team at Attio found that they could complement their PLG strategy with a creator-led growth strategy as well. By tapping into creators followed by founders & operators - they were able to reach more prospects and acquire more customers efficiently while also growing their brand.
+
+## Can We Find What You’re Looking For?
+
+Wouldn’t it be great if we could “guess” what you were looking for and provide you with a link to it? Fortunately, as we’ve built our site, we’ve tried to do a good job of creating routes that consist of keywords associated with the content of the page. This means we can assume that parsing a route (even one that resulted in a 404) should provide keywords that are relevant to what the user was trying to reach.
+
+We then send those parsed words to Algolia to search our site and display the three most relevant results to the user. With a little luck, the results shown will provide the information the visitor was looking for and they’re only a click away from continuing their journey.
+
+## Quick Access to Search
+
+What if there were no results or the results didn’t meet the user’s need. Without additional information, we can’t move the user forward. So we added a search input to the page to give quick access to finding what they’re looking for. Yes, we have a search bar on the top of every page in the navigation, but we don’t want users to expend unnecessary brain power trying to find it. Putting the search input front-and-center allows them to be on their way as efficiently as possible.
+
+Now that we’ve done all we can to provide relevant information and paths forward, let’s try to brighten their day by providing a chance to have fun before they move on.
+
+## Making it Enjoyable
+
+How to make it enjoyable ![Fire](/fire.webp)
+
+After some brainstorming, we had a list of requirements to recreate MadGab on our platform:
+
+1. Any API keys should remain on the server, or be short-lived (i.e. less than 5 minutes)
+1. Store the collection of gibberish phrases/answers on the server to protect them from cheaters 😁
+
+We hope to open-source MadGab in the future, but, for now, I’ll share how we achieved the goals above.
+
+## Protecting API Keys
+
+MadGab connects to the Deepgram API via a WebSocket and sends audio from the users’ microphone to be transcribed. This requires us to send an API key in the header of that connection. That means an API key will be exposed to the client. To minimize any risk, we wanted to use short-lived API keys. Because the developer platform is hosted on Netlify, functions seemed like a good option for providing a way to create a temporary API key to use for the game.
+
+Luckily for us, the Deepgram API allows creating API keys with a specified time-to-live. So we imported the Deepgram Node SDK and use it to create a key that lives for 5 seconds. That’s just long enough for our front-end to connect to the Deepgram API before it expires. Below is the code for the Netlify function that generates and returns the API key.
+
+```jsx
+import Image from "next/image";
+
+// This file allows you to provide custom React components
+// to be used in MDX files. You can import and use any
+// React component you want, including inline styles,
+// components from other libraries, and more.
+
+export function useMDXComponents(components) {
+  return {
+    // Allows customizing built-in components, e.g. to add styling.
+    h1: ({ children }) => <h1 style={{ fontSize: "100px" }}>{children}</h1>,
+    img: (props) => (
+      <Image
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
+        {...props}
+      />
+    ),
+    ...components,
+  };
+}
+```
+
+## Better Experiences are a Core Value
+
+At the heart of this project is a desire to provide a better experience for developers. Our team at Deepgram spends a LOT of time focused on how to make that happen. From the experience of signing up, working in our console, using our SDKs, and yes, even our 404 page. We want every encounter with Deepgram to be informative, helpful, and pleasant. So while 404 pages interrupt your flow of work, hopefully, these changes empower you to find what you need faster, while also providing an enjoyable experience.

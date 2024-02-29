@@ -8,8 +8,10 @@ import Body from "./Body";
 import PreSyntaxHighlighter from "./PreSyntaxHighlighter";
 import ListBlogPost from "./ListBlogPost";
 import { CustomMDX } from "./CustomMdxRemote";
+import Event from "./Event";
 
 export {
+  Event,
   Navbar,
   Body,
   Footer,

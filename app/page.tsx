@@ -14,9 +14,9 @@ export default function Home() {
         <div className="space-y-12 md:flex md:justify-between md:space-x-12">
           <div className="bg-[#a98d75] h-[474px] relative overflow-hidden rounded-t-[80px] md:w-1/3 lg:rounded-t-full">
             <Image
-              src={"/profile.png"}
-              width={150}
-              height={150}
+              src={"/profile.webp"}
+              width={1764}
+              height={2205}
               alt="profile image"
               priority={true}
               className="h-full w-full object-cover"
