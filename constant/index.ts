@@ -1,6 +1,15 @@
 export const projects: ProjectItem[] = [
   {
     id: crypto.randomUUID(),
+    title: "Ad free youtube music",
+    description:
+      "Ad-free YouTube music client. Listen to music from YouTube music without interruptions, focusing solely on the audio experience.",
+    image: "/project-images/music.webp",
+    link: "https://music-app-ecru-xi.vercel.app/",
+    tech: ["next js", "tailwind css"],
+  },
+  {
+    id: crypto.randomUUID(),
     title: "Panti Peduli",
     description:
       "As of my Kampus Merdeka project this is platform to make panti asuhan more visible to internet",
@@ -10,9 +19,17 @@ export const projects: ProjectItem[] = [
   },
   {
     id: crypto.randomUUID(),
-    title: "Vokemons",
+    title: "Baistream",
     description:
-      "The 'Responsive Vokemons UI' seamlessly blends the joy of Pokémon with a responsive design to ensure a smooth experience on both mobile and desktop devices.",
+      "Browser-based Local Video Player perfect for screen sharing during Google Meet calls.",
+    image: "/project-images/baistream.webp",
+    link: "https://baistream.netlify.app",
+    tech: ["react", "tailwind css"],
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Vokemons",
+    description: "Responsive pokemon themed website.",
     image: "/project-images/vokemons.webp",
     link: "https://candid-panda-c3abab.netlify.app",
     tech: ["html", "javaScript", "css", "tailwind css"],
@@ -25,32 +42,32 @@ export const projects: ProjectItem[] = [
     link: "https://baiquiz.netlify.app/",
     tech: ["html", "css", "javaScript"],
   },
-  {
-    id: crypto.randomUUID(),
-    title: "Wijaya Kusuma Kost",
-    description:
-      "Build a boarding management system that integrates a content management system (CMS) and utilizes a Supabase database.",
-    image: "/project-images/kost.webp",
-    link: "https://github.com/baicorp/Wijaya-kusuma-kost",
-    tech: ["next js", "supabase", "tailwind css"],
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "BRI UI Clone",
-    description: "Try flutter to create mobile UI of BRI bank.",
-    image: "/project-images/bri-bank.webp",
-    link: "https://github.com/baicorp/bank-rakyat-indonesia-app-ui",
-    tech: ["dart", "flutter", "firebase"],
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "UI Web Architect",
-    description:
-      "Implementing a mobile-first approach and utilizing Tailwind CSS to achieve responsive design.",
-    image: "/project-images/architect web.webp",
-    link: "https://github.com/baicorp/Web-Architect",
-    tech: ["vite", "react", "tailwind css"],
-  },
+  // {
+  //   id: crypto.randomUUID(),
+  //   title: "Wijaya Kusuma Kost",
+  //   description:
+  //     "Build a boarding management system that integrates a content management system (CMS) and utilizes a Supabase database.",
+  //   image: "/project-images/kost.webp",
+  //   link: "https://github.com/baicorp/Wijaya-kusuma-kost",
+  //   tech: ["next js", "supabase", "tailwind css"],
+  // },
+  // {
+  //   id: crypto.randomUUID(),
+  //   title: "BRI UI Clone",
+  //   description: "Try flutter to create mobile UI of BRI bank.",
+  //   image: "/project-images/bri-bank.webp",
+  //   link: "https://github.com/baicorp/bank-rakyat-indonesia-app-ui",
+  //   tech: ["dart", "flutter", "firebase"],
+  // },
+  // {
+  //   id: crypto.randomUUID(),
+  //   title: "UI Web Architect",
+  //   description:
+  //     "Implementing a mobile-first approach and utilizing Tailwind CSS to achieve responsive design.",
+  //   image: "/project-images/architect web.webp",
+  //   link: "https://github.com/baicorp/Web-Architect",
+  //   tech: ["vite", "react", "tailwind css"],
+  // },
   {
     id: crypto.randomUUID(),
     title: "Bai Note",
