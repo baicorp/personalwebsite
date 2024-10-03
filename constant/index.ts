@@ -10,6 +10,32 @@ export const projects: ProjectItem[] = [
   },
   {
     id: crypto.randomUUID(),
+    title: "OAuth",
+    description:
+      "Full-stack authentication system leveraging OAuth for Google and GitHub sign-in.",
+    image: "/project-images/OAuth.webp",
+    link: "https://github.com/baicorp/learning-auth",
+    tech: ["react", "bun", "hono", "drizzle-orm", "typescript"],
+  },
+  // {
+  //   id: crypto.randomUUID(),
+  //   title: "Panti Peduli",
+  //   description:
+  //     "As of my Kampus Merdeka project this is platform to make panti asuhan more visible to internet",
+  //   logo: "/project-images/panti-peduli.png",
+  //   link: "https://github.com/baicorp/peduli-panti",
+  //   tech: ["react", "tailwind css", "express", "sql", "firebase"],
+  // },
+  {
+    id: crypto.randomUUID(),
+    title: "Vokemons",
+    description: "Responsive pokemon themed website.",
+    image: "/project-images/vokemons.webp",
+    link: "https://candid-panda-c3abab.netlify.app",
+    tech: ["html", "javaScript", "css", "tailwind css"],
+  },
+  {
+    id: crypto.randomUUID(),
     title: "Panti Peduli",
     description:
       "As of my Kampus Merdeka project this is platform to make panti asuhan more visible to internet",
@@ -26,22 +52,23 @@ export const projects: ProjectItem[] = [
     link: "https://baistream.netlify.app",
     tech: ["react", "tailwind css"],
   },
-  {
-    id: crypto.randomUUID(),
-    title: "Vokemons",
-    description: "Responsive pokemon themed website.",
-    image: "/project-images/vokemons.webp",
-    link: "https://candid-panda-c3abab.netlify.app",
-    tech: ["html", "javaScript", "css", "tailwind css"],
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "Bai Quiz",
-    description: "Build fun quiz using open trivia database API.",
-    logo: "/project-images/quiz.webp",
-    link: "https://baiquiz.netlify.app/",
-    tech: ["html", "css", "javaScript"],
-  },
+  // {
+  //   id: crypto.randomUUID(),
+  //   title: "OAuth",
+  //   description:
+  //     "Full-stack authentication system leveraging OAuth for Google and GitHub sign-in.",
+  //   logo: "/project-images/OAuth.webp",
+  //   link: "https://baiquiz.netlify.app/",
+  //   tech: ["react", "bun", "hono", "drizzle", "typescript"],
+  // },
+  // {
+  //   id: crypto.randomUUID(),
+  //   title: "Bai Quiz",
+  //   description: "Build fun quiz using open trivia database API.",
+  //   logo: "/project-images/quiz.webp",
+  //   link: "https://baiquiz.netlify.app/",
+  //   tech: ["html", "css", "javaScript"],
+  // },
   // {
   //   id: crypto.randomUUID(),
   //   title: "Wijaya Kusuma Kost",
