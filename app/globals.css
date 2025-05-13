@@ -1,44 +1,36 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/Lato-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
-  font-display: swap;
+@theme {
+  --text-h1: clamp(3.025rem, 7.334vw + 1.306rem, 6rem);
+  --text-h2: clamp(1.938rem, 1.387vw + 1.612rem, 2.5rem);
+  --text-h3: clamp(1.25rem, 0.616vw + 1.106rem, 1.5rem);
+  --text-p: clamp(1rem, 0.616vw + 0.856rem, 1.25rem);
+
+  /* default theme color */
+  --color-main-background: #fffaf4;
+  /* --color-main-background: red; */
+  --color-accent-color: #dac0a3;
+  --color-card-background: #f8f1e59d;
+  --color-code-background: #f8f1e576;
+  --color-card-border: #c4bcab;
+  --color-headings-color: #000;
+  --color-text-color: #2c2c2c;
+  --color-selection-background: var(--color-headings-color);
+  --color-selection-text: var(--color-main-background);
+
+  --color-link-color: #0072f5;
 }
 
 @layer base {
-  :root {
-    --color-heading: #000000;
-    --color-text: #2c2c2c;
-    --background-main: #fffaf4;
-    --background-card: #f8f1e59d;
-    --background-code: #f8f1e576;
-    --border-card: #c4bcab;
-    --accent-color: #dac0a3;
-    --selection-background: var(--color-heading);
-    --selection-text: var(--background-main);
-    --text-h1: clamp(3.025rem, 7.334vw + 1.306rem, 6rem);
-    --text-h2: clamp(1.938rem, 1.387vw + 1.612rem, 2.5rem);
-    --text-h3: clamp(1.25rem, 0.616vw + 1.106rem, 1.5rem);
-    --text-p: clamp(1rem, 0.616vw + 0.856rem, 1.25rem);
-  }
-
   .dark {
-    --color-heading: #fff;
-    --color-text: #ddd;
-    --background-main: #050505;
-    --background-card: #101010;
-    --background-code: #2a2828;
-    --border-card: #f3f5f726;
-    --selection-background: var(--color-heading);
-    --selection-text: var(--background-main);
+    --color-main-background: #050505;
+    --color-card-background: #101010;
+    --color-code-background: #2a2828;
+    --color-card-border: #f3f5f726;
+    --color-headings-color: #fff;
+    --color-text-color: #ddd;
+    --color-selection-background: var(--color-headings-color);
+    --color-selection-text: var(--color-main-background);
   }
 
   h1,
@@ -48,38 +40,35 @@
   h5,
   h6,
   th {
-    color: var(--color-heading);
+    color: var(--color-headings-color);
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
   }
 
   h1 {
     font-size: var(--text-h1);
-    margin-bottom: var(--text-h1-mb);
   }
 
   h2 {
     font-size: var(--text-h2);
-    margin-top: var(--text-h2-mt);
   }
 
   h3 {
     font-size: var(--text-h3);
-    margin-top: var(--text-h3-mt);
   }
 
   p,
   li,
   td,
   a {
-    color: var(--color-text);
+    color: var(--color-text-color);
     font-size: var(--text-p);
     font-family: "Lato", sans-serif;
     letter-spacing: 0.03em;
   }
 
   hr {
-    border: 1.5px solid var(--border-card);
+    border: 1.5px solid var(--border-card-border);
   }
 
   table {
@@ -89,12 +78,25 @@
   }
 
   tr {
-    border-bottom: 1px solid var(--border-card);
+    border-bottom: 1px solid var(--border-card-border);
   }
   th,
   td {
-    color: var(--color-text);
+    color: var(--color-text-color);
     padding: 10px;
+  }
+}
+
+@layer utilities {
+  @font-face {
+    font-family: "Lato";
+    src: url("../fonts/Lato-Regular.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-VariableFont_wght.woff2") format("woff2");
+    font-display: swap;
   }
 }
 
