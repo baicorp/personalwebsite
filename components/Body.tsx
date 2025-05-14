@@ -1,7 +1,7 @@
 "use client";
 
 import { useThemeContext } from "@/context/ThemeProvider";
-import React, { ReactNode, useEffect } from "react";
+import React, { ReactNode } from "react";
 
 export default function Body({ children }: { children: ReactNode }) {
   const { theme } = useThemeContext();

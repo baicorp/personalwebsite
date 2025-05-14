@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <section className="max-w-[1200px] mx-auto px-4 py-8 md:p-16 space-y-12">
-        <h1 className="font-[900] text-center">
+        <h1 className="font-black text-center">
           {`Hi, I'm `}
           <span className="text-accent-color">Illah.</span>
         </h1>
@@ -60,7 +60,7 @@ export default function Home() {
             </div>
           </div>
           <div className="space-y-4 md:w-2/3 md:mt-8 md:space-y-8">
-            <h2 className="leading-tight md:leading-10 lg:leading-[3.5rem]">
+            <h2 className="leading-tight md:leading-10 lg:leading-14">
               {`I'm a Final-year Student Passionate About Frontend Development.`}
             </h2>
             <p>
