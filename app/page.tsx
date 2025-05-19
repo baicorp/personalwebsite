@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <section className="max-w-[1200px] mx-auto px-4 py-8 md:p-16 space-y-12">
         <h1 className="font-black text-center">
-          {`Hi, I'm `}
+          Hi, I’m
           <span className="text-accent-color">Illah.</span>
         </h1>
         <div className="space-y-12 md:flex md:justify-between md:space-x-12">
@@ -61,10 +61,10 @@ export default function Home() {
           </div>
           <div className="space-y-4 md:w-2/3 md:mt-8 md:space-y-8">
             <h2 className="leading-tight md:leading-10 lg:leading-14">
-              {`I'm a Final-year Student Passionate About Frontend Development.`}
+              I’m a Final-year Student Passionate About Frontend Development.
             </h2>
             <p>
-              I'm passionate about making <TechBadges title="react" /> apps as
+              I’m passionate about making <TechBadges title="react" /> apps as
               fast and efficient as possible. I enjoy diving into performance
               optimization, mastering rendering behavior, and exploring modern
               tools to make web apps shine.
