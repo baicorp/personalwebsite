@@ -1,4 +1,3 @@
-import { ReactNode } from "@mdx-js/react/lib";
 import { Metadata } from "next/types";
 import React from "react";
 
@@ -9,7 +8,7 @@ export const metadata: Metadata = {
   },
 };
 
-function layout({ children }: { children: ReactNode }) {
+function layout({ children }: { children: React.ReactNode }) {
   return <main>{children}</main>;
 }
 

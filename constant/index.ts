@@ -6,26 +6,17 @@ export const projects: ProjectItem[] = [
       "Ad-free YouTube music client. Listen to music from YouTube music without interruptions, focusing solely on the audio experience.",
     image: "/project-images/music.webp",
     link: "https://music-app-ecru-xi.vercel.app/",
-    tech: ["next js", "tailwind css"],
+    tech: ["next js", "typescript", "tailwind css"],
   },
   {
     id: crypto.randomUUID(),
-    title: "OAuth",
+    title: "AuthLite ",
     description:
-      "Full-stack authentication system leveraging OAuth for Google and GitHub sign-in.",
+      "A fullstack authentication system implementing session-based auth and OAuth, designed to be minimal, secure, and easy to extend.",
     image: "/project-images/OAuth.webp",
     link: "https://github.com/baicorp/learning-auth",
-    tech: ["react", "bun", "hono", "drizzle-orm", "typescript"],
+    tech: ["react", "typescript", "bun", "hono", "drizzle-orm", "neon-db"],
   },
-  // {
-  //   id: crypto.randomUUID(),
-  //   title: "Panti Peduli",
-  //   description:
-  //     "As of my Kampus Merdeka project this is platform to make panti asuhan more visible to internet",
-  //   logo: "/project-images/panti-peduli.png",
-  //   link: "https://github.com/baicorp/peduli-panti",
-  //   tech: ["react", "tailwind css", "express", "sql", "firebase"],
-  // },
   {
     id: crypto.randomUUID(),
     title: "Vokemons",
@@ -41,60 +32,25 @@ export const projects: ProjectItem[] = [
       "As of my Kampus Merdeka project this is platform to make panti asuhan more visible to internet",
     logo: "/project-images/panti-peduli.png",
     link: "https://github.com/baicorp/peduli-panti",
-    tech: ["react", "tailwind css", "express", "sql", "firebase"],
+    tech: [
+      "react",
+      "javascript",
+      "tailwind css",
+      "node js",
+      "express",
+      "sql",
+      "firebase",
+    ],
   },
   {
     id: crypto.randomUUID(),
     title: "Baistream",
     description:
-      "Browser-based Local Video Player perfect for screen sharing during Google Meet calls.",
+      "A lightweight video player optimized for screen sharing during Google Meet calls. Supports local file playback and subtitle extraction using FFmpeg.",
     image: "/project-images/baistream.webp",
     link: "https://baistream.netlify.app",
-    tech: ["react", "tailwind css"],
+    tech: ["react", "typescript", "tailwind css"],
   },
-  // {
-  //   id: crypto.randomUUID(),
-  //   title: "OAuth",
-  //   description:
-  //     "Full-stack authentication system leveraging OAuth for Google and GitHub sign-in.",
-  //   logo: "/project-images/OAuth.webp",
-  //   link: "https://baiquiz.netlify.app/",
-  //   tech: ["react", "bun", "hono", "drizzle", "typescript"],
-  // },
-  // {
-  //   id: crypto.randomUUID(),
-  //   title: "Bai Quiz",
-  //   description: "Build fun quiz using open trivia database API.",
-  //   logo: "/project-images/quiz.webp",
-  //   link: "https://baiquiz.netlify.app/",
-  //   tech: ["html", "css", "javaScript"],
-  // },
-  // {
-  //   id: crypto.randomUUID(),
-  //   title: "Wijaya Kusuma Kost",
-  //   description:
-  //     "Build a boarding management system that integrates a content management system (CMS) and utilizes a Supabase database.",
-  //   image: "/project-images/kost.webp",
-  //   link: "https://github.com/baicorp/Wijaya-kusuma-kost",
-  //   tech: ["next js", "supabase", "tailwind css"],
-  // },
-  // {
-  //   id: crypto.randomUUID(),
-  //   title: "BRI UI Clone",
-  //   description: "Try flutter to create mobile UI of BRI bank.",
-  //   image: "/project-images/bri-bank.webp",
-  //   link: "https://github.com/baicorp/bank-rakyat-indonesia-app-ui",
-  //   tech: ["dart", "flutter", "firebase"],
-  // },
-  // {
-  //   id: crypto.randomUUID(),
-  //   title: "UI Web Architect",
-  //   description:
-  //     "Implementing a mobile-first approach and utilizing Tailwind CSS to achieve responsive design.",
-  //   image: "/project-images/architect web.webp",
-  //   link: "https://github.com/baicorp/Web-Architect",
-  //   tech: ["vite", "react", "tailwind css"],
-  // },
   {
     id: crypto.randomUUID(),
     title: "Bai Note",
@@ -118,7 +74,6 @@ export const techSkills: TechSkills[] = [
     logoName: "python",
     logo: "/tech-icons/python.svg",
   },
-  { id: crypto.randomUUID(), logoName: "vite", logo: "/tech-icons/vite.svg" },
   { id: crypto.randomUUID(), logoName: "react", logo: "/tech-icons/react.svg" },
   {
     id: crypto.randomUUID(),
@@ -146,11 +101,6 @@ export const techSkills: TechSkills[] = [
     logo: "/tech-icons/express.svg",
   },
   { id: crypto.randomUUID(), logoName: "sql", logo: "/tech-icons/sql.svg" },
-  {
-    id: crypto.randomUUID(),
-    logoName: "supabase",
-    logo: "/tech-icons/supabase.svg",
-  },
   { id: crypto.randomUUID(), logoName: "git", logo: "/tech-icons/git.svg" },
 ];
 

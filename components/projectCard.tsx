@@ -22,7 +22,7 @@ export default function ProjectCard({
       <div className="flex justify-between space-x-4 items-center">
         <div className="space-y-6">
           <h3>{title}</h3>
-          <p className="md:tracking-wider">{description}</p>
+          <p>{description}</p>
         </div>
         {logo && (
           <Image
