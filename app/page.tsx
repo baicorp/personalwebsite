@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { projects, techSkills } from "@/constant";
-import { ProjectCard, Quotes, TechBadges, TechSkillsCard } from "@/components";
+import { projects } from "@/constant";
+import { ProjectCard, Quotes, TechBadges } from "@/components";
 import { Suspense } from "react";
 
 export default function Home() {
@@ -64,40 +64,17 @@ export default function Home() {
               {`I'm a Final-year Student Passionate About Frontend Development.`}
             </h2>
             <p>
-              At this time, I am actively working on expanding my knowledge of{" "}
-              {<TechBadges title="react" />}. Additionally, I am exploring{" "}
-              {<TechBadges title="next js" />} and experimenting with the{" "}
-              {<TechBadges title="supabase" />} database.
+              I'm passionate about making <TechBadges title="react" /> apps as
+              fast and efficient as possible. I enjoy diving into performance
+              optimization, mastering rendering behavior, and exploring modern
+              tools to make web apps shine.
             </p>
             <p>
-              I make sure to keep myself updated with the latest happenings in
-              the frontend field, and I really enjoy trying out new ideas and
-              tools.
+              I’m also exploring backend tech—from modern databases to
+              full-stack frameworks—to become a well-rounded developer. I love
+              trying new tools and staying up to date with the latest in tech.
             </p>
           </div>
-        </div>
-      </section>
-      <section className="max-w-[1200px] mx-auto px-4 py-8 md:p-16 space-y-12">
-        <h2 className="text-headings-color text-center flex justify-center gap-2 items-center">
-          Skills{" "}
-          <Image
-            src={"/fire.webp"}
-            width={30}
-            height={30}
-            alt="fire gif"
-            className="w-10 mb-2"
-          />{" "}
-        </h2>
-        <div className="flex gap-4 flex-wrap md:justify-center">
-          {techSkills.map((data) => {
-            return (
-              <TechSkillsCard
-                key={data.id}
-                logoName={data.logoName}
-                logo={data.logo}
-              />
-            );
-          })}
         </div>
       </section>
       <section className="max-w-[1440px] mx-auto px-4 py-8 md:p-16 space-y-12">

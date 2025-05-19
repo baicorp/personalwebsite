@@ -8,7 +8,6 @@
 
   /* default theme color */
   --color-main-background: #fffaf4;
-  /* --color-main-background: red; */
   --color-accent-color: #dac0a3;
   --color-card-background: #f8f1e59d;
   --color-code-background: #f8f1e576;
@@ -63,8 +62,8 @@
   a {
     color: var(--color-text-color);
     font-size: var(--text-p);
-    font-family: "Lato", sans-serif;
-    letter-spacing: 0.03em;
+    font-family: "Geist", sans-serif;
+    letter-spacing: -1%;
   }
 
   hr {
@@ -89,8 +88,8 @@
 
 @layer utilities {
   @font-face {
-    font-family: "Lato";
-    src: url("../fonts/Lato-Regular.woff2") format("woff2");
+    font-family: "Geist";
+    src: url("../fonts/Geist-VariableFont_wght.ttf") format("truetype");
     font-display: swap;
   }
   @font-face {
